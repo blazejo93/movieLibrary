@@ -1,13 +1,15 @@
 package org.example.models;
 
+import org.example.handlers.RandomDataProvider;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class MovieLibrary {
 
-    private List<Movie> movies;
+    private static List<Movie> movies;
 
-    public List<Movie> getMovies() {
+    public static List<Movie> getMovies() {
         return movies;
     }
 
@@ -48,4 +50,7 @@ public class MovieLibrary {
     }
 
 
+    public void getRandomMovieInformation() {
+        System.out.println(movies.get(RandomDataProvider.getRandomIndex()));
+    }
 }

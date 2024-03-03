@@ -13,17 +13,18 @@ public class MovieLibraryApp {
         MovieLibrary movieLibrary = new MovieLibrary();
         movieLibrary.fillMovieList();
         MenuHandlers.print();
-        switch(UserInputHandler.getMenuOption()){
-            case DISPLAYINFORMATIONABOUTRANDOMMOVIE:
-                //TODO dopisać kod dla tej opcji
-                break;
-            case DISPLAYALLMOVIESFORACTUALACTOR:
-                //TODO dopisać kod dla tej opcji
-                break;
-            case QUIT:
-                System.out.println("Wychodzenie");
-                System.exit(1);
+        while (true) {
+            switch (UserInputHandler.getMenuOption()) {
+                case DISPLAYINFORMATIONABOUTRANDOMMOVIE:
+                    movieLibrary.getRandomMovieInformation();
+                    break;
+                case DISPLAYALLMOVIESFORACTUALACTOR:
+                    //TODO dopisać kod dla tej opcji
+                    break;
+                case QUIT:
+                    System.out.println("Wychodzenie");
+                    System.exit(1);
+            }
         }
-
     }
 }
