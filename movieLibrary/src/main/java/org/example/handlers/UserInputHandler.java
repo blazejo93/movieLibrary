@@ -1,5 +1,7 @@
 package org.example.handlers;
 
+import org.example.models.Actor;
+
 import java.util.Scanner;
 
 public class UserInputHandler {
@@ -18,7 +20,7 @@ public class UserInputHandler {
         int result = getIntegerFromUser();
 
         scanner.nextLine();
-        if (result > 0 && result < MenuOptions.values().length +1) {
+        if (result > 0 && result < MenuOptions.values().length + 1) {
             return result;
         } else {
             System.out.println("You selected non existing option, Try again");
@@ -29,4 +31,11 @@ public class UserInputHandler {
     public static MenuOptions getMenuOption() {
         return MenuOptions.values()[getSelectedOptionFromUser() - 1];
     }
+
+    public static Actor getActorFromUser() {
+        System.out.println("Type an actor: ");
+        String[] actors = scanner.nextLine().split(" ");
+        return new Actor(actors[0], actors[1]);
+    }
 }
+

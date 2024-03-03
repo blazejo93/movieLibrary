@@ -19,7 +19,7 @@ public class MovieLibraryApp {
                     movieLibrary.getRandomMovieInformation();
                     break;
                 case DISPLAYALLMOVIESFORACTUALACTOR:
-                    //TODO dopisać kod dla tej opcji
+                    movieLibrary.getMoviesForActor();
                     break;
                 case QUIT:
                     System.out.println("Wychodzenie");
