@@ -1,6 +1,7 @@
 package org.example;
 
 import org.example.handlers.MenuHandlers;
+import org.example.handlers.UserInputHandler;
 import org.example.models.Movie;
 import org.example.models.MovieLibrary;
 
@@ -12,7 +13,7 @@ public class MovieLibraryApp {
         MovieLibrary movieLibrary = new MovieLibrary();
         movieLibrary.fillMovieList();
         MenuHandlers.print();
-        switch(){
+        switch(UserInputHandler.getMenuOption()){
             case DISPLAYINFORMATIONABOUTRANDOMMOVIE:
                 //TODO dopisać kod dla tej opcji
                 break;
